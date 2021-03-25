@@ -139,10 +139,71 @@ Tire.prototype.draw = function() {
     ctx.beginPath()
     ctx.lineWidth = 2;
     ctx.strokeStyle = 'gray';
-    ctx.strokeRect(this.x,this.y,this.width,this.height)
+    //ctx.strokeRect(this.x,this.y,this.width,this.height)
+    roundedRect(ctx,this.x,this.y,this.width,this.height,10)
+   
     ctx.font = '20px serif';
     ctx.fillText(this.tireId, this.x + (this.width/2), this.y - 3);
+
+    ctx.strokeStyle = 'black';
+    ctx.lineWidth = 0.5;
+    // ctx.beginPath();
+    // ctx.moveTo(this.x + 5, this.y + 5);
+    // ctx.lineTo(this.x + 10, this.y + 10);
+    // ctx.lineTo(this.x + 5, this.y + 15);
+    // ctx.lineTo(this.x + 10, this.y + 20);
+    // ctx.lineTo(this.x + 5, this.y + 25);
+    // ctx.lineTo(this.x + 5 , this.y + this.height - 5);
+   
+    // ctx.closePath();
+    // ctx.stroke();
+
+    
+    
+ 
+   
+    let iteratorRepeatLine = 0
+    for(j=0;j<5;j++){
+        iteratorRepeatLine = iteratorRepeatLine + 5
+        let iteratorNumber = 0
+        for(i=0;i<14;i++){
+        
+            iteratorNumber = iteratorNumber + 5;
+            if(i%2 > 0){
+                ctx.beginPath();
+                ctx.moveTo(this.x + iteratorRepeatLine , this.y + iteratorNumber);
+                ctx.lineTo(this.x + iteratorRepeatLine + 5, this.y + iteratorNumber + 5);
+                //ctx.lineTo(this.x + 5, this.y + iteratorNumber + 5);
+                ctx.closePath();
+                ctx.stroke();
+               
+            }else{
+                ctx.beginPath();
+                ctx.moveTo(this.x + iteratorRepeatLine + 5, this.y + iteratorNumber);
+                ctx.lineTo(this.x + iteratorRepeatLine , this.y + iteratorNumber + 5);
+                //ctx.lineTo(this.x + 5, this.y + iteratorNumber + 5);
+                ctx.closePath();
+                ctx.stroke();
+            }
+           
+        }
+    }
 }
+
+
+function roundedRect(ctx, x, y, width, height, radius) {
+    ctx.beginPath();
+    ctx.moveTo(x, y + radius);
+    ctx.lineTo(x, y + height - radius);
+    ctx.arcTo(x, y + height, x + radius, y + height, radius);
+    ctx.lineTo(x + width - radius, y + height);
+    ctx.arcTo(x + width, y + height, x + width, y + height-radius, radius);
+    ctx.lineTo(x + width, y + radius);
+    ctx.arcTo(x + width, y, x + width - radius, y, radius);
+    ctx.lineTo(x + radius, y);
+    ctx.arcTo(x, y, x, y + radius, radius);
+    ctx.stroke();
+  }
 
 // Tire.prototype.canvas.addEventListener = function() {
 //     swal('click')
