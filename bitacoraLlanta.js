@@ -210,13 +210,36 @@ function roundedRect(ctx, x, y, width, height, radius) {
 // }
 
 Axis.prototype.draw = function() {
-    
-    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.lineWidth = 2;
     ctx.strokeStyle = 'blue';
     //console.log(this.x + this.width)
     ctx.moveTo(this.x - 20, this.y);
     ctx.lineTo(this.x + this.width + 20, this.y );
+    ctx.closePath();
     ctx.stroke();
+    ctx.beginPath();
+    ctx.strokeStyle = 'gray';
+    ctx.lineWidth = 1;
+    ctx.strokeRect(this.x-20,this.y-5,this.width + 20,10);
+    ctx.stroke();
+    ctx.fillRect(this.x-20,this.y-10,20,20);
+    ctx.fillRect(this.x + this.width,this.y-10,20,20);
+    ctx.closePath();
+    ctx.stroke();
+
+    // if(this.axisId != 1){
+    //     ctx.beginPath();
+    //     ctx.strokeStyle = 'gray';
+    //     ctx.lineWidth = 1;
+    //     //ctx.strokeRect(this.x + ((this.width-25)/2),this.y-25,50,50);
+    //     roundedRect(ctx,this.x + ((this.width-40)/2),this.y-15,50,30,10)
+    //     ctx.closePath();
+    //     ctx.stroke();
+    // }
+
+
+    
 }
 
 Truck.prototype.draw = function() {
