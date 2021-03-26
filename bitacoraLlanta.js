@@ -163,7 +163,7 @@ Tire.prototype.draw = function() {
  
    
     let iteratorRepeatLine = 0
-    for(j=0;j<5;j++){
+    for(j=0;j<6;j++){
         iteratorRepeatLine = iteratorRepeatLine + 5
         let iteratorNumber = 0
         for(i=0;i<14;i++){
