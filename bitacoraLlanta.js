@@ -7,7 +7,6 @@ const height = canvas.height = window.innerHeight
 
 
 
-
 function Tire(tireId,axisId,x,y,width,height,numberTire,brand){
     this.tireId = tireId
     this.axisId = axisId
