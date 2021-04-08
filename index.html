@@ -5,11 +5,196 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    
+    <link rel="stylesheet" href="css/grid-css.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    
 </head>
 <body>
-    <h1><center>Bitacora de Llantas</center></h1>
-    <canvas></canvas>
+    <div class="grid-container">
+        <!--HEAD INIT-->
+        <div class="head">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                        <img alt="Brand" src="images/tyre.png" width="30" height="30">
+                        </a>
+                    </div>
+        
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            
+                            <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                              </ul>
+                            </li>
+                        </ul>
+        
+                        <form class="navbar-form navbar-left">
+                            <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </form>
+        
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
+        <!--HEAD END-->
+        <!--LEFT INIT-->
+        <div class="panel-left" style="padding-left: 20px;">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Panel header</div>
+                <div class="panel-body">
+                    <form>
+                        <div class="form-group">
+                          <label for="formGroupExampleInput">Código Unidad</label>
+                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                        </div>
+                        <div class="form-group">
+                          <label for="formGroupExampleInput2">Tipo Unidad</label>
+                          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Número de Placa</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput3" placeholder="Another input">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Marca De Cabezal</label>
+                            <input type="text" class="form-control" id="formGroupExampleInput4" placeholder="Another input">
+                        </div>
+                    </form>
+
+                     <!-- Table -->
+                <table class="table">
+                    <tr>
+                      <th>#</th>
+                      <th>Quemado</th>
+                      <th>Marca</th>
+                      <th>Estado</th>
+                    </tr>
+                    <tr>
+                      <th>1</th>
+                      <td>46205</td>
+                      <td>LONG MARCH</td>
+                      <td>Buena</td>
+                    </tr>
+                    <tr>
+                      <th>2</th>
+                      <td>46206</td>
+                      <td>LONG MARCH</td>
+                      <td>Buena</td>
+                    </tr>
+                    <tr>
+                      <th>3</th>
+                      <td>46206</td>
+                      <td>LONG MARCH</td>
+                      <td>Buena</td>
+                    </tr>
+                    <tr>
+                      <th>4</th>
+                      <td>46205</td>
+                      <td>LONG MARCH</td>
+                      <td>Buena</td>
+                    </tr>
+                    <tr>
+                      <th>5</th>
+                      <td>46206</td>
+                      <td>LONG MARCH</td>
+                      <td>Buena</td>
+                    </tr>
+                    <tr>
+                      <th>6</th>
+                      <td>46206</td>
+                      <td>LONG MARCH</td>
+                      <td>Buena</td>
+                    </tr>
+                    <tr>
+                      <th>7</th>
+                      <td>46205</td>
+                      <td>LONG MARCH</td>
+                      <td>Buena</td>
+                    </tr>
+                    <tr>
+                      <th>8</th>
+                      <td>46206</td>
+                      <td>LONG MARCH</td>
+                      <td>Buena</td>
+                    </tr>
+                    <tr>
+                      <th>9</th>
+                      <td>46206</td>
+                      <td>LONG MARCH</td>
+                      <td>Buena</td>
+                    </tr>
+                    <tr>
+                      <th>10</th>
+                      <td>46205</td>
+                      <td>LONG MARCH</td>
+                      <td>Buena</td>
+                    </tr>
+                    <tr>
+                      <th>11</th>
+                      <td>46206</td>
+                      <td>LONG MARCH</td>
+                      <td>Buena</td>
+                    </tr>
+                    <tr>
+                      <th>12</th>
+                      <td>46206</td>
+                      <td>LONG MARCH</td>
+                      <td>Buena</td>
+                    </tr>
+                  </table>
+                </div>
+                <div class="panel-footer">Panel footer</div>
+                
+            </div>
+           
+
+        </div>
+        <!--LEFT END-->
+        <!--RIGHT INIT-->
+        <div id="panel-right" class="panel-right" >
+
+            <canvas></canvas>
+
+            
+            
+        </div>
+        <!--RIGHT END-->
+    </div>
+
+
+   
+
+  
+ 
+
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
     <script src='bitacoraLlanta.js'></script>
 </body>
 </html>

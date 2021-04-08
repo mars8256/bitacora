@@ -1,0 +1,17 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.4fr 1.1fr;
+    grid-template-rows: 0.1fr 1.3fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "head head"
+      "panel-left panel-right";
+  }
+  
+  .head { grid-area: head; }
+  
+  .panel-left { grid-area: panel-left; }
+  
+  .panel-right { grid-area: panel-right; }
+  
+  

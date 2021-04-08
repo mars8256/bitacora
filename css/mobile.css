@@ -1,0 +1,16 @@
+@media (max-width: 600px){
+    body{
+        background: yellow;
+    }
+
+    .products{
+        display: inherit;
+        height: auto;
+    }
+
+    .product{
+        margin-top: auto;
+    }
+
+
+}

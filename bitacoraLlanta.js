@@ -1,9 +1,20 @@
 const canvas = document.querySelector('canvas')
+const panelRight = document.getElementById('panel-right')
 const ctx = canvas.getContext('2d')
 const swal = window.swal
 
-const width = canvas.width = window.innerWidth
-const height = canvas.height = window.innerHeight
+// const width = canvas.width = window.innerWidth
+// const height = canvas.height = window.innerHeight
+
+const width = canvas.width = panelRight.getBoundingClientRect().width
+const height = canvas.height = panelRight.getBoundingClientRect().height
+
+// const width = canvas.width
+// const height = canvas.height
+
+const widthTruck = canvas.width * 0.5
+const heightTruck = canvas.height * 0.8
+
 
 
 
@@ -281,5 +292,14 @@ canvas.addEventListener('click', function(e) {
 
   })
 
-var truck1 = new Truck(1,3,10,300,100,200,400)
+var truck1 = new Truck(
+    1,
+    3,
+    10,
+    panelRight.getBoundingClientRect().x,
+    panelRight.getBoundingClientRect().y,
+    200,
+    400)
 truck1.draw()
+
+//console.log(panelRight.getBoundingClientRect().x)
