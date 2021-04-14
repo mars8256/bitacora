@@ -1,17 +1,20 @@
 .grid-container {
-    display: grid;
-    grid-template-columns: 0.4fr 1.1fr;
-    grid-template-rows: 0.1fr 1.3fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "head head"
-      "panel-left panel-right";
-  }
-  
-  .head { grid-area: head; }
-  
-  .panel-left { grid-area: panel-left; }
-  
-  .panel-right { grid-area: panel-right; }
-  
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.8fr 1.2fr;
+  grid-template-rows: 0.2fr 2.3fr 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "head head head head"
+    "workarea workarea workarea objectDescription"
+    "footer footer footer footer";
+}
+
+.head { grid-area: head; }
+
+.footer { grid-area: footer; }
+
+.workarea { grid-area: workarea; }
+
+.objectDescription { grid-area: objectDescription; }
+
   
