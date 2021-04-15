@@ -479,7 +479,7 @@ var truck1 = new Truck(
     10,
     workArea.getBoundingClientRect().x + 150,
     workArea.getBoundingClientRect().y,
-    200, //widthTruck,
+    180, //widthTruck,
     360, //heightTruck,
     arrayTires1)
  
@@ -493,7 +493,7 @@ var truck2 = new Truck(
     10,
     workArea.getBoundingClientRect().x + 150,
     workArea.getBoundingClientRect().y,
-    200,//widthTruck,
+    180,//widthTruck,
     360,//heightTruck,
     arrayTires2)
     

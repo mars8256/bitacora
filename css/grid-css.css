@@ -9,12 +9,12 @@
     "footer footer footer footer";
 }
 
-.head { grid-area: head; }
+.head { grid-area: head; /*background-color: blue;*/ }
 
-.footer { grid-area: footer; }
+.footer { grid-area: footer; /*background-color: burlywood;*/ }
 
-.workarea { grid-area: workarea; }
+.workarea { grid-area: workarea; margin: 10px; justify-content: center; /*background-color: darkgreen;*/ }
 
-.objectDescription { grid-area: objectDescription; }
+.objectDescription { grid-area: objectDescription; margin: 10px; /*background-color: darkred;*/ }
 
   
