@@ -4,6 +4,13 @@ const clear = document.getElementById('clear')
 const tipoUnidad = document.getElementById('tipoUnidad')
 const numeroDePlaca = document.getElementById('numeroDePlaca')
 const marcaCabezal = document.getElementById('marcaCabezal')
+const exampleModal = document.getElementById('exampleModal')
+const txtQuemado = document.getElementById('txtQuemado')
+const cboMarca = document.getElementById('cboMarca')
+const cboMedida = document.getElementById('cboMedida')
+const cboActividad = document.getElementById('cboActividad')
+
+//myModal  txtQuemado  cboMarca cboMedida cboActividad
 
 //const btnfind = document.getElementById('btnfind')
 const ctx = canvas.getContext('2d')
@@ -238,7 +245,7 @@ function Truck(visible, truckId, tipoUnidad,placa,marcaCabezal, axisNumber,tireN
                         if(j === 10){
                             var tx = new TireAsigned()
                             tx = tiresAsigned[j-1]
-                            console.log(j-1)
+                            //console.log(j-1)
                             console.log(tx)
                             var tire = new Tire(j,
                                 xi,
@@ -374,8 +381,13 @@ canvas.addEventListener('click', function(e) {
             if(e.x > truck1.tires[i].x && e.x < (truck1.tires[i].x + truck1.tires[i].width)){
                 if(e.y > truck1.tires[i].y+60 && e.y < (truck1.tires[i].y+60 + truck1.tires[i].height)){
                     //window.alert('Llanta seleccionada ' + truck1.tires[i].tireId)
-                    swal('Posición Llanta: ' + truck1.tires[i].tireId,
-                          'Marca:' + truck1.tires[i].brand + '\nId Llanta:' + truck1.tires[i].numberTire )
+                    $("#exampleModal").modal()
+                    txtQuemado.value = truck1.tires[i].numberTire
+                    cboMarca.value = truck1.tires[i].brand
+                    //cboActividad.value = ""
+                    // swal('Posición Llanta: ' + truck1.tires[i].tireId,
+                    //       'Marca:' + truck1.tires[i].brand + 
+                    //       '\nId Llanta:' + truck1.tires[i].numberTire )
                 }
             }
         }
@@ -384,8 +396,12 @@ canvas.addEventListener('click', function(e) {
             if(e.x > truck2.tires[i].x && e.x < (truck2.tires[i].x + truck2.tires[i].width)){
                 if(e.y > truck2.tires[i].y+60 && e.y < (truck2.tires[i].y+60 + truck2.tires[i].height)){
                     //window.alert('Llanta seleccionada ' + truck1.tires[i].tireId)
-                    swal('Posición Llanta: ' + truck2.tires[i].tireId,
-                          'Marca:' + truck2.tires[i].brand + '\nId Llanta:' + truck2.tires[i].numberTire )
+                    $("#exampleModal").modal()
+                    txtQuemado.value = truck2.tires[i].numberTire
+                    cboMarca.value = truck2.tires[i].brand
+                    //cboActividad = ""
+                    // swal('Posición Llanta: ' + truck2.tires[i].tireId,
+                    //       'Marca:' + truck2.tires[i].brand + '\nId Llanta:' + truck2.tires[i].numberTire )
                 }
             }
         }
@@ -406,16 +422,16 @@ canvas.addEventListener('click', function(e) {
 var arrayTires1 = []
 var arrayTires2 = []
 
-var t1 = new TireAsigned('328','46205','1','LONG MARCH','95','08/09/2020','75R22.5','LM216','DIRECCIÓN')
-var t2 = new TireAsigned('328','46206','2','LONG MARCH','95','08/09/2020','75R22.5','LM216','DIRECCIÓN')
-var t3 = new TireAsigned('328','46191','3','DOUBLE COIN','95','08/09/2020','80R22.5','RLB1','TRACCIÓN')
-var t4 = new TireAsigned('328','46192','4','DOUBLE COIN','95','08/09/2020','80R22.5','RLB1','TRACCIÓN')
-var t5 = new TireAsigned('328','46103','5','DOUBLE COIN','95','08/09/2020','80R22.5','RLB1','TRACCIÓN')
-var t6 = new TireAsigned('328','46194','6','DOUBLE COIN','95','08/09/2020','80R22.5','RLB1','TRACCIÓN')
-var t7 = new TireAsigned('328','45392','7','DOUBLE COIN','95','08/09/2020','80R22.5','RLB450','TRACCIÓN')
-var t8 = new TireAsigned('328','42676','8','DOUBLE COIN','95','08/09/2020','80R22.5','RLB450','TRACCIÓN')
-var t9 = new TireAsigned('328','45394','9','DOUBLE COIN','95','08/09/2020','80R22.5','RLB450','TRACCIÓN')
-var t10 = new TireAsigned('328','46523','10','DOUBLE COIN','95','08/09/2020','80R22.5','RLB1','TRACCIÓN')
+var t1 = new TireAsigned('328','46205','1','LONG MARCH','95','08/09/2020','295/75R22.5','LM216','DIRECCIÓN')
+var t2 = new TireAsigned('328','46206','2','LONG MARCH','95','08/09/2020','295/75R22.5','LM216','DIRECCIÓN')
+var t3 = new TireAsigned('328','46191','3','DOUBLE COIN','95','08/09/2020','295/80R22.5','RLB1','TRACCIÓN')
+var t4 = new TireAsigned('328','46192','4','DOUBLE COIN','95','08/09/2020','295/80R22.5','RLB1','TRACCIÓN')
+var t5 = new TireAsigned('328','46103','5','DOUBLE COIN','95','08/09/2020','295/80R22.5','RLB1','TRACCIÓN')
+var t6 = new TireAsigned('328','46194','6','DOUBLE COIN','95','08/09/2020','295/80R22.5','RLB1','TRACCIÓN')
+var t7 = new TireAsigned('328','45392','7','DOUBLE COIN','95','08/09/2020','295/80R22.5','RLB450','TRACCIÓN')
+var t8 = new TireAsigned('328','42676','8','DOUBLE COIN','95','08/09/2020','295/80R22.5','RLB450','TRACCIÓN')
+var t9 = new TireAsigned('328','45394','9','DOUBLE COIN','95','08/09/2020','295/80R22.5','RLB450','TRACCIÓN')
+var t10 = new TireAsigned('328','46523','10','DOUBLE COIN','95','08/09/2020','295/80R22.5','RLB1','TRACCIÓN')
 //var t10 = new TireAsigned('328','','10','','','','','','')
 arrayTires1.push(t1)
 arrayTires1.push(t2)
@@ -429,16 +445,16 @@ arrayTires1.push(t9)
 arrayTires1.push(t10)
 
 
-var t21 = new TireAsigned('581','46832','1','LONG MARCH','95','16/09/2020','75R22.5','LM216','DIRECCIÓN')
-var t22 = new TireAsigned('581','46833','2','LONG MARCH','95','16/09/2020','75R22.5','LM216','DIRECCIÓN')
-var t23 = new TireAsigned('581','46092','3','LONG MARCH','95','05/08/2020','80R22.5','RLB1','TRACCIÓN')
-var t24 = new TireAsigned('581','46093','4','LONG MARCH','95','05/08/2020','80R22.5','RLB1','TRACCIÓN')
-var t25 = new TireAsigned('581','46094','5','LONG MARCH','95','05/08/2020','80R22.5','RLB1','TRACCIÓN')
-var t26 = new TireAsigned('581','46095','6','LONG MARCH','95','05/08/2020','80R22.5','RLB1','TRACCIÓN')
-var t27 = new TireAsigned('581','46096','7','LONG MARCH','95','05/08/2020','80R22.5','RLB450','TRACCIÓN')
-var t28 = new TireAsigned('581','46097','8','LONG MARCH','95','05/08/2020','80R22.5','RLB450','TRACCIÓN')
-var t29 = new TireAsigned('581','46098','9','LONG MARCH','95','05/08/2020','80R22.5','RLB450','TRACCIÓN')
-var t210 = new TireAsigned('581','46099','10','LONG MARCH','95','05/08/2020','80R22.5','RLB1','TRACCIÓN')
+var t21 = new TireAsigned('581','46832','1','LONG MARCH','95','16/09/2020','295/75R22.5','LM216','DIRECCIÓN')
+var t22 = new TireAsigned('581','46833','2','LONG MARCH','95','16/09/2020','295/75R22.5','LM216','DIRECCIÓN')
+var t23 = new TireAsigned('581','46092','3','LONG MARCH','95','05/08/2020','295/75R22.5','RLB1','TRACCIÓN')
+var t24 = new TireAsigned('581','46093','4','LONG MARCH','95','05/08/2020','295/75R22.5','RLB1','TRACCIÓN')
+var t25 = new TireAsigned('581','46094','5','LONG MARCH','95','05/08/2020','295/75R22.5','RLB1','TRACCIÓN')
+var t26 = new TireAsigned('581','46095','6','LONG MARCH','95','05/08/2020','295/75R22.5','RLB1','TRACCIÓN')
+var t27 = new TireAsigned('581','46096','7','LONG MARCH','95','05/08/2020','295/75R22.5','RLB450','TRACCIÓN')
+var t28 = new TireAsigned('581','46097','8','LONG MARCH','95','05/08/2020','295/75R22.5','RLB450','TRACCIÓN')
+var t29 = new TireAsigned('581','46098','9','LONG MARCH','95','05/08/2020','295/75R22.5','RLB450','TRACCIÓN')
+var t210 = new TireAsigned('581','46099','10','LONG MARCH','95','05/08/2020','295/75R22.5','RLB1','TRACCIÓN')
 arrayTires2.push(t21)
 arrayTires2.push(t22)
 arrayTires2.push(t23)
