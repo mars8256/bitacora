@@ -1,16 +1,16 @@
-const url = 'http://www.502sdhs.com/bitacora/actividad'
+const url = 'http://www.502sdhs.com/bitacora/marca'
 
 const txtId = document.getElementById('txtId')
 const txtDescripcion = document.getElementById('txtDescripcion')
 
 
-function fetchActividades(){
+function fetchMarcaLlanta(){
     fetch(url)
     .then(response => response.json())
     .then(data => loadTableData(data))
   }
 
-function fetchSaveActividades(){
+function fetchSaveMarcaLlanta(){
     var data = txtDescripcion.value
     console.log(data)
     fetch(url, {
@@ -40,8 +40,8 @@ function fetchSaveActividades(){
     table.innerHTML = ''
     for(item in items){
         let row = table.insertRow();
-        let idActividad = row.insertCell(0)
-        idActividad.innerHTML = items[item].idActividad
+        let idMarca = row.insertCell(0)
+        idMarca.innerHTML = items[item].idMarca
         let descripcion = row.insertCell(1)
         descripcion.innerHTML = items[item].descripcion
         

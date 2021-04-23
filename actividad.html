@@ -13,40 +13,60 @@
     <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
-    <nav class="navbar navbar-default">
-        <a class="navbar-brand" href="index.html">Home</a>
-        <a class="navbar-brand" href="actividad.html">Actividad</a>
-    </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary  navbar-fixed-top " >
+    
+    <a class="navbar-brand" href="index.html" style="color:snow">Home</a>
+    <a class="navbar-brand" href="actividad.html" style="color: snow;">Actividad</a>
+    <a class="navbar-brand" href="marcallanta.html" style="color: snow;">Marca Llanta</a>
+  </nav>
+  <br>
+  <br>
+  <br>
+
+ 
+
+  <div class="container">
     <div class="panel panel-primary">
                
-        <div class="panel-body">
+      <div class="panel-body">
 
-            <form>
-                <div class="form-group">
-                  <label for="formGroupExampleInput">Id</label>
-                  <input type="text" class="form-control" id="txtId" placeholder="Example input">
+          <form>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Id</label>
+                <input type="text" class="form-control" id="txtId" placeholder="Example input">
+              </div>
+              <div class="form-group">
+                  <label for="formGroupExampleInput">Descripción</label>
+                  <input type="text" class="form-control" id="txtDescripcion" placeholder="Example input">
                 </div>
-                <div class="form-group">
-                    <label for="formGroupExampleInput">Descripción</label>
-                    <input type="text" class="form-control" id="txtDescripcion" placeholder="Example input">
-                  </div>
-                <button type="button" id="btnFind" class="btn btn-primary" onclick="fetchActividades()">Buscar</button>
-                <button type="button" id="btnSave" class="btn btn-primary" onclick="fetchSaveActividades()">Save</button>
-            </form>
+              <!-- <button type="button" id="btnFind" class="btn btn-primary" onclick="fetchActividades()">Buscar</button> -->
+              <!-- <button type="button" id="btnSave" class="btn btn-primary" onclick="fetchSaveActividades()">Save</button> -->
+              <a class="btn btn-primary btn-lg" href="#" role="button" id="btnfind2" onclick="fetchActividades()">Find</a>
+              <a class="btn btn-primary btn-lg" href="#" role="button" id="btnfind3" onclick="fetchSaveActividades()">Save</a>
+          </form>
 
-        </div>
-    </div>
+      </div>
+  </div>
 
-    <table id="myTable" class="table">
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Descripción</th>
-          </tr>
-        </thead>
-        <tbody id="testBody"></tbody>
-         
-    </table>
+  <table id="myTable" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody id="testBody"></tbody>
+  </table>
+
+  </div>
+  
+    <!-- <nav class="navbar navbar-default">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <a class="navbar-brand" href="actividad.html">Actividad</a>
+    </nav> -->
+    
+
+
 
    
 
